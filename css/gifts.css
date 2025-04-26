@@ -1,0 +1,102 @@
+
+.main {
+  background-image: none;
+}
+
+.gifts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 60px 82px;
+  color: var(--static-white-color);
+  font-weight: 600;
+  background-image: url(../assets/bg-garland.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.gifts__title {
+  width: 400px;
+  font-size: 32px;
+  line-height: 1.5em;
+  letter-spacing: 5.7px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.gifts__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu__item {
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-size: 12px;
+  line-height: 1.3em;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.menu__item--active {
+  background-color: var(--static-white20-color);
+  pointer-events: none;
+}
+
+.menu__item:hover {
+  background-color: var(--static-white20-color);
+  transition: background-color 0.3s ease-in;
+}
+
+.gifts__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 342px;
+  grid-auto-rows: 342px;
+  gap: 12px;
+}
+
+.gifts__item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: var(--content-bg-color);
+  cursor: pointer;
+}
+
+.gifts__item:hover .gifts__subtitle{
+  color: var(--primary-color);
+  transition: color 0.3s ease-in;
+}
+
+.gifts__subtitle {
+  position: relative;
+  height: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding-top: 44px;
+  padding-left: 20px;
+  color: var(--dark-color);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5em;
+  letter-spacing: 1.2px;
+  text-align: start;
+  text-transform: uppercase;
+  background-color: var(--static-white-color);
+}
+
+.gifts__subtitle::before {
+  content: attr(data-sticker-text);
+  position: absolute;
+  top: 20px;
+  font-size: 12px;
+  line-height: 1.3em;
+  letter-spacing: 0.8px;
+}
